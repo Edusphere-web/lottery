@@ -4,31 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lottery Game</title>
-    <link rel="stylesheet" href="lotter.css">
+    <link rel="stylesheet" href="lotter.css" />
   </head>
   <body>
     <fieldset>
-    <h1>Game Begins</h1>
-    <h3>
-      Player-1 score:
-      <p></p>
-    </h3>
-    <h3>
-      Player-2 score:
-      <p></p>
-    </h3>
-    <h3>
-      Player-3 score:
-      <p></p>
-    </h3>
-    <h3>
-      Player-4 score:
-      <p></p>
-    </h3>
+      <h1>Game Begins</h1>
+      <h3>
+        Player-1 score:
+        <p></p>
+      </h3>
+      <h3>
+        Player-2 score:
+        <p></p>
+      </h3>
+      <h3>
+        Player-3 score:
+        <p></p>
+      </h3>
+      <h3>
+        Player-4 score:
+        <p></p>
+      </h3>
 
-    <button>Generate Score</button>
+      <button>Generate Score</button>
     </fieldset>
-
   </body>
 
   <script>
@@ -38,7 +37,17 @@
     btn.addEventListener("click", () => {
       for (let p of paras) {
         p.innerText = Math.round(Math.random() * 10);
+
+        if (p.innerText == 10) {
+        p.style.backgroundColor = "yellow";
+      }else if(p.innerText == 0){
+        p.style.backgroundColor = "red";
+      }else{
+        p.style.backgroundColor = "green";
       }
+      }
+
+      
     });
   </script>
 </html>
