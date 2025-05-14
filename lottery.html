@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottery Game</title>
+    <link rel="stylesheet" href="lotter.css">
+  </head>
+  <body>
+    <fieldset>
+    <h1>Game Begins</h1>
+    <h3>
+      Player-1 score:
+      <p></p>
+    </h3>
+    <h3>
+      Player-2 score:
+      <p></p>
+    </h3>
+    <h3>
+      Player-3 score:
+      <p></p>
+    </h3>
+    <h3>
+      Player-4 score:
+      <p></p>
+    </h3>
+
+    <button>Generate Score</button>
+    </fieldset>
+
+  </body>
+
+  <script>
+    let paras = document.querySelectorAll("p");
+    let btn = document.querySelector("button");
+
+    btn.addEventListener("click", () => {
+      for (let p of paras) {
+        p.innerText = Math.round(Math.random() * 10);
+      }
+    });
+  </script>
+</html>
